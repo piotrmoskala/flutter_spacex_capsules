@@ -35,6 +35,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  retrofit_generator: any
+  build_runner: any
+  floor_generator: any
+  json_serializable: ^3.2.0
+  #The issue to track is: #62240 - Analyzer 0.39.15 seems to break build_runner or json_serializable
+  analyzer: '0.39.14'
 
 flutter:
 
