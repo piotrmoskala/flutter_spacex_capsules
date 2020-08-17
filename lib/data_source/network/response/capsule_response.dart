@@ -1,5 +1,6 @@
 
 import 'package:json_annotation/json_annotation.dart';
+import 'package:spacex_capsules/model/capsule.dart';
 
 part 'capsule_response.g.dart';
 
@@ -14,4 +15,8 @@ class CapsuleResponse {
       _$CapsuleResponseFromJson(json);
 
   Map<String, dynamic> toJson() => _$CapsuleResponseToJson(this);
+
+  Capsule toCapsule() {
+    return Capsule(id: id);
+  }
 }

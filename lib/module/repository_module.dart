@@ -5,7 +5,8 @@ import 'base_module.dart';
 
 class RepositoryModule extends BaseModule {
   @override
-  Future<void> module(GetIt getIt) async {
-    getIt.registerLazySingleton(() => CapsulesRepository());
+  Future<void> register(GetIt getIt) async {
+    getIt.registerLazySingleton<CapsulesRepository>(
+        () => CapsulesRepositoryImpl(getIt()));
   }
 }

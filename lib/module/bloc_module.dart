@@ -4,7 +4,7 @@ import 'package:spacex_capsules/module/base_module.dart';
 
 class BlocModule extends BaseModule {
   @override
-  Future<void> module(GetIt getIt) async {
-    getIt.registerLazySingleton(() => CapsuleListCubit());
+  Future<void> register(GetIt getIt) async {
+    getIt.registerLazySingleton(() => CapsuleListCubit(getIt()));
   }
 }

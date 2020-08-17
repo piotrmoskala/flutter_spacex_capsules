@@ -5,7 +5,8 @@ import 'base_module.dart';
 
 class UseCaseModule extends BaseModule {
   @override
-  Future<void> module(GetIt getIt) async {
-    getIt.registerLazySingleton(() => GetCapsulesUseCase());
+  Future<void> register(GetIt getIt) async {
+    getIt.registerLazySingleton<GetCapsulesUseCase>(
+        () => GetCapsulesUseCaseImpl(getIt()));
   }
 }

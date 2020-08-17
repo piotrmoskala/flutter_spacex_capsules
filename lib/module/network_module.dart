@@ -5,7 +5,7 @@ import 'package:spacex_capsules/module/base_module.dart';
 
 class NetworkModule extends BaseModule {
   @override
-  Future<void> module(GetIt getIt) async {
+  Future<void> register(GetIt getIt) async {
     getIt.registerLazySingleton(() => Dio());
     getIt.registerLazySingleton(() => ApiService(getIt()));
   }

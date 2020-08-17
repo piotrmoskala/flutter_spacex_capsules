@@ -12,4 +12,12 @@ class CapsuleListEmpty extends CapsuleListState {}
 
 class CapsuleListLoading extends CapsuleListState {}
 
-class CapsuleList extends CapsuleListState {}
+class CapsuleList extends CapsuleListState {
+  final List<Capsule> capsules;
+  CapsuleList(this.capsules);
+}
+
+class CapsuleListError extends CapsuleListState {
+  final String message; 
+  CapsuleListError(this.message);
+}
