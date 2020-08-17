@@ -4,7 +4,6 @@ import 'package:spacex_capsules/injector.dart';
 import 'feature/capsule_list/widget/capsule_list_page.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   await Injector.init();
   Injector.getIt.allReady().then((value) => runApp(MyApp()));
 }

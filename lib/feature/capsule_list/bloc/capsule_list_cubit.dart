@@ -8,7 +8,9 @@ part 'capsule_list_state.dart';
 class CapsuleListCubit extends Cubit<CapsuleListState> {
   final GetCapsulesUseCase _getCapsulesUseCase;
 
-  CapsuleListCubit(this._getCapsulesUseCase) : super(CapsuleListInitial());
+  CapsuleListCubit(this._getCapsulesUseCase) : super(CapsuleListInitial()) {
+    this.getCapsules();
+  }
 
   void getCapsules() async {
     emit(CapsuleListLoading());
@@ -18,6 +20,6 @@ class CapsuleListCubit extends Cubit<CapsuleListState> {
       } else {
         emit(CapsuleList(capsules));
       }
-    }).catchError((error) => CapsuleListError(error.toString()));
+    }).catchError((error) => emit(CapsuleListError(error.toString())));
   }
 }
