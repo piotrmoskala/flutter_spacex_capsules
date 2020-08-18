@@ -19,15 +19,21 @@ class DescriptionWidget extends StatelessWidget {
           Text(
             title,
             textAlign: TextAlign.left,
-            style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
           ),
-          Flexible(child: Text(
-            description == null ? "no data" : description,
-            textAlign: TextAlign.left,
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w300),
-          ),)
+          Flexible(
+            child: Text(
+              description == null ? "no data" : description,
+              textAlign: TextAlign.left,
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300),
+            ),
+          )
         ],
       ),
     );
