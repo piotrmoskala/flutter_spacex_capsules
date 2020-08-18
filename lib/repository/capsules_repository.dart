@@ -6,8 +6,7 @@ abstract class CapsulesRepository {
 }
 
 class CapsulesRepositoryImpl extends CapsulesRepository {
-
-  final ApiService _apiService; 
+  final ApiService _apiService;
 
   CapsulesRepositoryImpl(this._apiService);
 
