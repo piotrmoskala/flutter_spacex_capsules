@@ -45,8 +45,7 @@ class _HorizontalContentItemListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.fromLTRB(16.0, 0, 0, 0),
-      child: ContentItemWidget(
-          capsule: item, onPressed: () => onTap(item)),
+      child: ContentItemWidget(capsule: item, onPressed: () => onTap(item)),
     );
   }
 }

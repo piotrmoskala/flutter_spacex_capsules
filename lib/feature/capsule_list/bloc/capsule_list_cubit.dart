@@ -25,5 +25,4 @@ class CapsuleListCubit extends Cubit<CapsuleListState> {
   }
 
   void capsuleSelected(Capsule capsule) => emit(CapsuleListSelected(capsule));
-  
 }
