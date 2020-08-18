@@ -18,10 +18,11 @@ void main() {
   blocTest<CapsuleListCubit, CapsuleListState>(
     'emits list of capsules',
     build: () {
-      // when(mockGetCapsulesUseCase.getCapsules())
-      //     .thenAnswer((realInvocation) async => capsules);
+      when(mockGetCapsulesUseCase.getCapsules())
+          .thenAnswer((realInvocation) async => capsules);
       return CapsuleListCubit(mockGetCapsulesUseCase);
     },
+    act: (cubit) => cubit.getCapsules(),
     expect: [CapsuleListLoading(), CapsuleList(capsules)],
     verify: (_) {
       verify(mockGetCapsulesUseCase.getCapsules()).called(1);

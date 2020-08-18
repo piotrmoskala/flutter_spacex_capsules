@@ -19,7 +19,11 @@ class CapsuleListCubit extends Cubit<CapsuleListState> {
         emit(CapsuleListEmpty());
       } else {
         emit(CapsuleList(capsules));
+        emit(CapsuleListSelected(capsules[0]));
       }
     }).catchError((error) => emit(CapsuleListError(error.toString())));
   }
+
+  void capsuleSelected(Capsule capsule) => emit(CapsuleListSelected(capsule));
+  
 }
