@@ -11,7 +11,7 @@ class DescriptionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.maxFinite,
-      padding: padding,
+      padding: padding == null ? EdgeInsets.only(left: 24, right: 24) : padding,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,13 +21,13 @@ class DescriptionWidget extends StatelessWidget {
             textAlign: TextAlign.left,
             style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
           ),
-          Text(
+          Flexible(child: Text(
             description == null ? "no data" : description,
             textAlign: TextAlign.left,
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w300),
-          ),
+          ),)
         ],
       ),
     );
