@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spacex_capsules/assets/strings.dart';
 import 'package:spacex_capsules/feature/base_page.dart';
 import 'package:spacex_capsules/feature/capsule_list/bloc/capsule_list_cubit.dart';
 import 'package:spacex_capsules/widget/capsule_details_widget.dart';
@@ -15,7 +16,7 @@ class CapsuleListPage extends BasePage<CapsuleListCubit> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          title: Text("Capsules"),
+          title: Text(Strings.appTitle),
         ),
         body: Container(
           color: Colors.black87,
@@ -67,7 +68,7 @@ class CapsuleListPage extends BasePage<CapsuleListCubit> {
 
     if (state is CapsuleListEmpty) {
       return EmptyWidget(
-        text: "List is empty",
+        text: Strings.listEmpty,
       );
     }
 

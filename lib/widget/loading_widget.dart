@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:spacex_capsules/assets/strings.dart';
 
 class LoadingWidget extends StatelessWidget {
   final Color loaderColor;
@@ -20,7 +21,7 @@ class LoadingWidget extends StatelessWidget {
                 valueColor: AlwaysStoppedAnimation<Color>(this.loaderColor),
                 strokeWidth: 2),
             Text(
-              "Loading data..",
+              Strings.loadingData,
               style: TextStyle(
                   color: textColor == null ? this.loaderColor : this.textColor,
                   fontSize: 16,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:spacex_capsules/assets/strings.dart';
 
 class DescriptionWidget extends StatelessWidget {
   final String title;
@@ -24,7 +25,7 @@ class DescriptionWidget extends StatelessWidget {
           ),
           Flexible(
             child: Text(
-              description == null ? "no data" : description,
+              description == null ? Strings.noData : description,
               textAlign: TextAlign.left,
               maxLines: 3,
               overflow: TextOverflow.ellipsis,

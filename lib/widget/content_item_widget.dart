@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:spacex_capsules/assets/strings.dart';
 import 'package:spacex_capsules/model/capsule.dart';
 
 class ContentItemWidget extends StatelessWidget {
@@ -27,12 +28,12 @@ class ContentItemWidget extends StatelessWidget {
                 children: [
                   Image.network(
                       "https://logo-logos.com/wp-content/uploads/2018/02/SpaceX.png"),
-                  Text("Capsule id:"),
+                  Text(Strings.capsuleId),
                   Text(
                     capsule.id,
                     textAlign: TextAlign.center,
                   ),
-                  Text("Serial number:"),
+                  Text(Strings.capsuleSerial),
                   Text(
                     capsule.serial,
                     textAlign: TextAlign.center,
